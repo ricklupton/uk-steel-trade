@@ -1,0 +1,19 @@
+sector_code,sector_group,sector_name,iron_content
+4,Metal Goods,"Bolts, nuts, rivets, screws, etc.",1.00
+5,Metal Goods,"Hand tools, cutlery, instrument engineering",0.85
+6,Metal Goods,Packaging and industrial and domestic hollow-ware,1.00
+7,Metal Goods,"Other metal goods (including furnitue, doors, windows, non-electric domestic appliances, and springs)",0.60
+8,Electrical engineering,"Electrical engineering, including elec. domestic appliances",0.30
+9,Mechanical engineering,Agricultural machinery,0.85
+10,Mechanical engineering,Metal working toolsand engineering tools,0.71
+11,Mechanical engineering,"Construction, earth moving and mechanical handling equipment",0.85
+12,Mechanical engineering,Other mechanical engineering,0.71
+13,Mechanical engineering,Industrial and process plant,1.00
+14,Construction,Construction and fabricated constructional steelwork,1.00
+15a,Transport,Motor vehicles: BIW,0.87
+15b,Transport,Motor vehicles: drivetrain and trimmings,0.44
+16,Transport,Other transport,0.58
+17,"Energy, Water Supply and Chemical Industries","Coal, coke, petroleum and natural gas",0.60
+18,"Energy, Water Supply and Chemical Industries","Gas, electricity and water",0.60
+19,"Energy, Water Supply and Chemical Industries",Chemical and allied industries,0.60
+20,Others,Other UK consumers,0.60

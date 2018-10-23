@@ -1,0 +1,123 @@
+{
+  "homepage": "https://github.com/ricklupton/uk-steel-trade",
+  "name": "uk-steel-trade",
+  "resources": [
+    {
+      "path": "data/imports.csv",
+      "profile": "tabular-data-resource",
+      "name": "imports",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "sector_code",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "sector_group",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "sector_name",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "stage",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "enum": ["component", "final"]
+            }
+          },
+          {
+            "name": "year",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "iron_content",
+            "type": "number",
+            "format": "default"
+          },
+          {
+            "name": "mass",
+            "type": "number",
+            "format": "default"
+          },
+          {
+            "name": "mass_iron",
+            "type": "number",
+            "format": "default"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/exports.csv",
+      "profile": "tabular-data-resource",
+      "name": "exports",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "sector_code",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "sector_group",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "sector_name",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "stage",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "enum": ["component", "final"]
+            }
+          },
+          {
+            "name": "year",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "iron_content",
+            "type": "number",
+            "format": "default"
+          },
+          {
+            "name": "mass",
+            "type": "number",
+            "format": "default"
+          },
+          {
+            "name": "mass_iron",
+            "type": "number",
+            "format": "default"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    }
+  ],
+  "title": "UK overseas trade of steel-containing goods"
+}
