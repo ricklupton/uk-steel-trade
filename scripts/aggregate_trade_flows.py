@@ -9,6 +9,19 @@ logger.info('Starting %s', os.path.basename(__file__))
 # Load the trade data
 trade = pd.read_csv('raw_data/comtrade_trade_data.csv')
 
+# Apply "corrections" ---------------------------------------------------------------------------------------
+def overwrite_data(code, flow, years):
+    ii = ((trade['Commodity Code'] == code) &
+          (trade['Period'].isin(years)) &
+          (trade['Trade Flow'] == flow))
+    new_value = trade['NetWeight (kg)'][ii & (trade['Period'] == years[0])].iloc[0]
+    logger.debug('overwriting %s %s for %s to %s', code, flow, years, new_value)
+    trade.loc[ii, 'NetWeight (kg)'] = new_value
+
+overwrite_data('S2-69402', 'Import', [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007])
+overwrite_data('S2-874', 'Import', [1999, 2000])
+
+
 def check_values(df, column, value):
     msg = 'Expected "%s" column to be %r' % (column, value)
     assert all(df[column] == value), msg
