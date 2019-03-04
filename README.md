@@ -1,7 +1,11 @@
+[![goodtables.io](https://goodtables.io/badge/github/ricklupton/uk-steel-trade.svg)](https://goodtables.io/github/ricklupton/uk-steel-trade)
+
 Indirect trade of steel through steel-containing components and products, from
 1978 to 2017.
 
-This repository is a [Data Package](https://frictionlessdata.io/data-packages/).
+This repository is a [Data Package](https://frictionlessdata.io/data-packages/):
+use the viewer to [browse the metadata and
+data](https://data.okfn.org/tools/view?url=https%3A%2F%2Fgithub.com%2Fricklupton%2Fuk-steel-trade).
 
 ## Data
 
