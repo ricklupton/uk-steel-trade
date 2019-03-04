@@ -39,6 +39,13 @@ License](http://creativecommons.org/licenses/by/4.0/). Please attribute it as fo
 
 ## Preparation
 
+Install [Pipenv](https://pipenv.readthedocs.io/en/latest/), and then use it to
+set up a Python environment with the necessary packages to prepare the data:
+
+```
+pipenv install
+```
+
 Run the scripts to download and prepare the COMTRADE data using Make:
 
 ```
