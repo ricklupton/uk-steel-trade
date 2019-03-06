@@ -67,6 +67,5 @@ def check_data(data, year):
 
 if __name__ == '__main__':
     args = docopt(__doc__)
-    print(args)
     year = int(args['YEAR'])
     download_year(year, args['FILENAME'])

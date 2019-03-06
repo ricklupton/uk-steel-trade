@@ -8,6 +8,7 @@ requests = "*"
 docopt = "*"
 pandas = "*"
 logzero = "*"
+goodtables = "*"
 
 [dev-packages]
 

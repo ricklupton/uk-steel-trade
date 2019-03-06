@@ -1,11 +1,12 @@
 {
   "homepage": "https://github.com/ricklupton/uk-steel-trade",
   "name": "uk-steel-trade",
+  "title": "UK overseas trade of steel-containing goods",
   "resources": [
     {
-      "path": "data/imports.csv",
+      "path": "data/trade.csv",
       "profile": "tabular-data-resource",
-      "name": "imports",
+      "name": "trade",
       "format": "csv",
       "mediatype": "text/csv",
       "encoding": "utf-8",
@@ -14,22 +15,35 @@
           {
             "name": "sector_code",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "description": "Sector code"
           },
           {
             "name": "sector_group",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "description": "Aggregated group this sector belongs to"
           },
           {
             "name": "sector_name",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "description": "Sector name"
+          },
+          {
+            "name": "direction",
+            "type": "string",
+            "format": "default",
+            "description": "Direction of the trade flow, i.e. import or export",
+            "constraints": {
+              "enum": ["import", "export", "re-import", "re-export"]
+            }
           },
           {
             "name": "stage",
             "type": "string",
             "format": "default",
+            "description": "Is this import/export of an intermediate component into manufacturing, or final goods?",
             "constraints": {
               "enum": ["component", "final"]
             }
@@ -37,80 +51,26 @@
           {
             "name": "year",
             "type": "integer",
-            "format": "default"
-          },
-          {
-            "name": "iron_content",
-            "type": "number",
-            "format": "default"
-          },
-          {
-            "name": "mass",
-            "type": "number",
-            "format": "default"
-          },
-          {
-            "name": "mass_iron",
-            "type": "number",
-            "format": "default"
-          }
-        ],
-        "missingValues": [
-          ""
-        ]
-      }
-    },
-    {
-      "path": "data/exports.csv",
-      "profile": "tabular-data-resource",
-      "name": "exports",
-      "format": "csv",
-      "mediatype": "text/csv",
-      "encoding": "utf-8",
-      "schema": {
-        "fields": [
-          {
-            "name": "sector_code",
-            "type": "string",
-            "format": "default"
-          },
-          {
-            "name": "sector_group",
-            "type": "string",
-            "format": "default"
-          },
-          {
-            "name": "sector_name",
-            "type": "string",
-            "format": "default"
-          },
-          {
-            "name": "stage",
-            "type": "string",
             "format": "default",
-            "constraints": {
-              "enum": ["component", "final"]
-            }
-          },
-          {
-            "name": "year",
-            "type": "integer",
-            "format": "default"
+            "description": "Year"
           },
           {
             "name": "iron_content",
             "type": "number",
-            "format": "default"
+            "format": "default",
+            "description": "Fraction of iron content in this component/goods (0-1)"
           },
           {
             "name": "mass",
             "type": "number",
-            "format": "default"
+            "format": "default",
+            "description": "Total mass of component/goods traded (kt)"
           },
           {
             "name": "mass_iron",
             "type": "number",
-            "format": "default"
+            "format": "default",
+            "description": "Mass of iron content of component/goods"
           }
         ],
         "missingValues": [
@@ -118,6 +78,5 @@
         ]
       }
     }
-  ],
-  "title": "UK overseas trade of steel-containing goods"
+  ]
 }

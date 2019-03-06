@@ -100,16 +100,15 @@ def main(files, alloc_filename, contents_filename):
 
 
     # Save
-    df = agg.set_index('direction')
-    df = df[['sector_code', 'sector_group', 'sector_name', 'stage', 'year',
-            'iron_content', 'mass', 'mass_iron']]
+    df = agg[['sector_code', 'sector_group', 'sector_name', 'direction',
+              'stage', 'year', 'iron_content', 'mass', 'mass_iron']]
     df['year'] = df['year'].astype(int)
     df['iron_content'] = df['iron_content'].round(2)
     df['mass'] = df['mass'].round(1)
     df['mass_iron'] = df['mass_iron'].round(1)
+    df['direction'] = df['direction'].str.lower()
 
-    df.loc['Import'].to_csv('data/imports.csv', index=False)
-    df.loc['Export'].to_csv('data/exports.csv', index=False)
+    df.to_csv('data/trade.csv', index=False)
 
 
 if __name__ == '__main__':
