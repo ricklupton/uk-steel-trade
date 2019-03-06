@@ -55,5 +55,4 @@ make
 This will:
 - Download the raw data to `build/raw_data`
 - Output detailed tables to `build/checking_table.csv`
-- Write the aggregated import and exports data to `data/imports.csv` and
-  `data/exports.csv`.
+- Write the aggregated import and exports data to `data/trade.csv`
